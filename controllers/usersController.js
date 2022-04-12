@@ -1,4 +1,4 @@
-const res = require("express/lib/response");
+
 const users =require("../data/users")
 
 //get all users
@@ -15,7 +15,7 @@ const createUser = (req,res)=>{
 
 // get user by the id 
 const getUser = (req, res)=>{
-    const userId = req.param.id;
+    const userId = req.params.id;
     const user = users.find((u)=>u.id==userId);
 
     if (!user){
